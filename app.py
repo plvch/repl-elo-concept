@@ -51,10 +51,7 @@ def load_landmarks_from_csv():
     try:
         with open(csv_path, 'r') as csvfile:
             csv_reader = csv.DictReader(csvfile)
-            count = 0
             for row in csv_reader:
-                if count >= 100:
-                    break
                 landmark = Landmark(
                     unique_number=row['unique_number'],
                     name_en=row['name_en'],
@@ -62,9 +59,8 @@ def load_landmarks_from_csv():
                     elo=1400
                 )
                 db.session.add(landmark)
-                count += 1
         db.session.commit()
-        logger.info(f"100 landmarks loaded from {csv_path}")
+        logger.info(f"All landmarks loaded from {csv_path}")
     except Exception as e:
         logger.error(f"Error loading landmarks from CSV: {str(e)}")
         raise

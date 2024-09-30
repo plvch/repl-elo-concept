@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNESCO Landmark Comparison</title>
+    <title>Landmark Comparison</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <h1>UNESCO Landmark Comparison</h1>
+    <h1>Landmark Comparison</h1>
     <p id="progress"></p>
     <div id="comparison" class="comparison"></div>
     <div id="leaderboard" class="leaderboard"></div>
+    <footer>
+        <p>Source: <a href="https://whc.unesco.org/en/list/" target="_blank">World Heritage List</a></p>
+    </footer>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
