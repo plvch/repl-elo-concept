@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.comparison {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.landmark {
+    width: 45%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.landmark:hover {
+    background-color: #f0f0f0;
+}
+
+.leaderboard {
+    margin-top: 40px;
+}
+
+.leaderboard h2 {
+    text-align: center;
+}
+
+.leaderboard ol {
+    padding-left: 20px;
+}
