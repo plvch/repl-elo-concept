@@ -60,9 +60,9 @@ async function handleChoice(chosenIndex) {
 
 function updateLeaderboard() {
     const leaderboardElement = document.getElementById('leaderboard');
-    const sortedLandmarks = landmarks.sort((a, b) => b.elo - a.elo).slice(0, 10);
+    const sortedLandmarks = landmarks.sort((a, b) => b.elo - a.elo).slice(0, 25);
     
-    leaderboardElement.innerHTML = '<h2>Leaderboard</h2><ol>' +
+    leaderboardElement.innerHTML = '<h2>Leaderboard (Top 25)</h2><ol>' +
         sortedLandmarks.map(landmark => `
             <li>${landmark.name_en} (${landmark.states_name_en}) - ELO: ${Math.round(landmark.elo)}</li>
         `).join('') +

@@ -11,7 +11,7 @@ def index():
 
 @main_bp.route('/api/landmarks', methods=['GET'])
 def get_landmarks():
-    landmarks = Landmark.query.order_by(Landmark.elo.desc()).all()
+    landmarks = Landmark.query.order_by(Landmark.elo.desc()).limit(25).all()
     return jsonify([landmark.to_dict() for landmark in landmarks])
 
 @main_bp.route('/api/compare', methods=['POST'])
